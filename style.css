@@ -265,3 +265,54 @@ li button:hover { background-color: #c0392b;}
 .shadow-pop {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
+
+/* ==========================================================================
+   🔒 COMPACT WORD LIST & HIDDEN DELETE SLIDER
+   ========================================================================== */
+
+/* Style each word item container */
+#word-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Light highlight when you hover over a row */
+#word-list li:hover {
+    background-color: #edf2f7;
+    border-color: #cbd5e0;
+}
+
+/* The sleek, tiny trash button */
+#word-list li button {
+    background-color: #e53e3e !important;
+    color: white !important;
+    border: none !important;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+    font-size: 0.75rem !important;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    
+    /* 🔥 THE MAGIC TRICK: Hide it by default! */
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+/* 🔥 REVEAL LOCK: Show the delete button ONLY when hovering over the row! */
+#word-list li:hover button,
+#word-list li:active button,
+#word-list li:focus-within button {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
