@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my mandarin flashcards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+</head>
+<body>
+    <div class="nav-wrapper-right">
+        <button id="add-panel-toggle" class="floating-icon-btn">
+            <i class="fa-solid fa-square-plus"></i> </button>
+        <div id="add-word-square" class="compact-square shadow-pop">
+            <h3> + ADD TO DECK </h3>
+            <input type="text" id="user-hanzi" placeholder="Enter Hanzi">
+            <input type="text" id="user-pinyin" placeholder="Enter Pinyin">
+            <input type="text" id="user-meaning" placeholder="Enter Meaning">
+            <button id="add-btn">ADD WORD</button>
+        </div>
+    </div>
+    <div class="nav-wrapper-left">
+        <button id="list-panel-toggle" class="floating-icon-btn">
+        <i class="fa-solid fa-book-open"></i> </button>
+
+        <div id="word-list-drawer" class="side-drawer-left shadow-pop">
+            <h2>My Word Bank</h2>
+            <ul id="word-list"></ul>
+        </div>
+    </div>
+    <h1>Mandarin Flashcard Tracker woohoo</h1>
+    <div id="welcome-menu">
+        <h2>准备好了吗？我们开始吧！( •̀ ω •́ )✧</h2>
+        <div class="menu-buttons">
+            <button id="continue-btn"> Continue session</button>
+            <button id="reset-btn"> Fresh Start~</button>
+        </div>
+    </div>
+    <div class="card-container" id="flashcard-container">
+        <div class="card" id="card-inner">
+            <div class="card-face card-front">
+                <p id="card-hanzi">---</p>
+                <span class="tap-hint"> Click Card or Flip Button to see</span>
+            </div>
+            <div class="card-face card-back">
+                <p id="card-pinyin" class="pinyin">---</p>
+                <p id="card-meaning" class="meaning">---</p>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button id="next-btn">NEXT</button>
+        <button id="flip-btn">FLIP</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
